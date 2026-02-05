@@ -14,10 +14,258 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-        Hello world!
-    </h1>
 
-</body>
+    <body>
+        <nav class="bg-blue-400 w-full h-15">
+            <div class="flex justify-around items-center mx-5">
+                <div>
+                    <h1 class="flex items-center font-bold text-3xl text-pink-400">EBUY</h1>
+                </div>
+                <div class="flex items-center w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+                    <!-- Input texte -->
+                    <input type="text" placeholder="Rechercher un produit..."
+                        class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+                    <!-- Recherche par image -->
+                    <label for="image-search" class="cursor-pointer text-xl mr-2">
+                        📷
+                    </label>
+                    <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+                    <!-- Bouton recherche -->
+                    <button class="text-lg">
+                        🔍
+                    </button>
+                </div>
+                <div class="flex gap-5 justify-center text-white font-bold">
+                    <a href="">ACCUEIL</a>
+                    <a href="">SERVICE</a>
+                    <a href="">ACCESSOIRE</a>
+                    <a href="">MODE</a>
+                    <a class=" px-5  bg-white " href="">🛒</a>
+
+
+
+                    <button class="px-5 text-black bg-white">connexion</button>
+
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-gradient-to-r from-blue-400 via-pink-400 to-blue-400 w-full h-75 ">
+            <div class="flex flex-col items-center justify-center text-white pt-20 ">
+                <div>
+                    <h1 class="text-5xl font-bold pb-3 text-center">Bienvenue sur Ebuy</h1>
+                    <p class="pb-3 text-center">Découvrez des milliers de produits avec notre recherche par image
+                        innovante
+                        <br>et une experience d'achat immersive à 360°
+                    </p>
+                </div>
+                <div>
+                    <button class="bg-white p-2 text-black ">En savoir plus</button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="flex justify-center gap-20 pt-10  pb-5 bg-[#f1f1f1]">
+                <div class=" flex flex-col justify-center items-center">
+                    <div class="bg-blue-400 text-center w-20 rounded-[100%] text-3xl p-5 ">📷</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">Recherche par image </p>
+                    <p class="text-center tracking-wider pt-5">Trouvez des produits <br>simulaire en prenant <br>
+                        simplement
+                        une
+                        photo</p>
+                </div>
+                <div class=" flex flex-col justify-center items-center">
+                    <div class=" bg-green-400 text-center w-20 rounded-[100%] text-3xl p-5 ">360°</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">vue 360°</p>
+                    <p class="text-center tracking-wider pt-5">Explorez les produits sous tous <br> les angles avant
+                        d'achater
+                        <br>
+                        pour une meilleure vision
+                    </p>
+                </div>
+                <div class=" flex flex-col justify-center items-center">
+                    <div class=" bg-red-400 text-center w-20 rounded-[100%] text-3xl p-5 ">🎯</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">Personnalisé</p>
+                    <p class="text-center tracking-wider pt-5">Recommandations baseés sur <br> vos préferences et votre
+                        <br>
+                        historique
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <h1 class="font-bold text-2xl underline  pl-10 mt-20">Nos produits</h1>
+            <div class="flex gap-7 gap-y-7 flex-wrap justify-around flex-col md:flex-row bg-[#f1f1f1] p-12 ">
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au Panier</button>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au Panier</button>
+                    </div>
+                </div>
+                <!-- 
+             -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+                <!-- deuxiem -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+                <!-- deuxiem -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+                <!-- deuxiem -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+                <!-- deuxiem -->
+                <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover   w-70 h-[240px] ">
+
+                    </div>
+                    <p class="bg-[#f1f1f1] w-25 mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                            Panier</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <footer class="bg-black w-full h-55 mt-20">
+
+        </footer>
+
+
+    </body>
 
 </html>
