@@ -74,111 +74,198 @@
 </head>
 <body>
 
-<header class="relative py-40  bg-cover bg-center bg-no reapet " style="background-image: url('image/A.jpg');">
-      <div class="flex  flex-col justify-center items-center text-cyan-400"> 
-          <h1 class="text-2xl font-bold md:text-4xl font-bold lg:text-6xl font-bold uppercase">UniSport Sénégal</h1>
+    <nav class="bg-blue-400 w-full h-15 ">
+        <div class="flex justify-around items-center mx-5 gap-5">
+            <div>
+                <h1 class="flex items-center font-bold text-3xl text-pink-400">EBUY</h1>
+            </div>
+            <div class="flex items-center w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+  
+                <input type="text" placeholder="Rechercher un produit..."
+                    class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+
+                <label for="image-search" class="cursor-pointer text-xl mr-2">
+                    📷
+                </label>
+                <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+            
+                <button class="text-lg">
+                    🔍
+                </button>
+            </div>
+              <div class="hidden md:flex  space-x-3 text-sm lg:text-base font-bold text-base">
+                <a href="#" class="text-blanc hover:text-indigo-200 ">ACCUEIL</a>
+                <a href="#" class="text-blanc hover:text-indigo-200 ">SERVICE</a>
+                <a href="#" class="text-blanc hover:text-indigo-200 ">ACCESSOIRE</a>
+                <a href="#" class="text-blanc hover:text-indigo-200 ">MODE</a>
+                <a href="#" class="text-blanc hover:text-indigo-200 ">SPORT</a>
+              </div>
+               
+            <div class="flex gap-5">
+                <a class=" px-3  bg-white hover:bg-indigo-200 rounded-[8px]" href="">🛒</a>
+                <button class="px-5 text-black font-semibold bg-white hover:bg-indigo-200 rounded-[8px]">connexion</button>
+            </div>
+          
+            <div class="md:hidden text-blanc font-bold  cursor-pointer px-5">☰</div>
+
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+         
+    </nav>
+
+    <header class="bg-gradient-to-r from-blue-400 via-pink-400 to-blue-400 w-full h-75 ">
+        <div class="flex flex-col items-center justify-center text-white pt-20 ">
+            <div>
+                <h1 class="text-5xl font-bold pb-3 text-center">Bienvenue sur Ebuy</h1>
+                <p class="pb-3 text-center">Découvrez des milliers de produits avec notre recherche par image innovante
+                    <br>et une experience d'achat immersive à 360°
+                </p>
+            </div>
+            <div>
+                <button class="bg-white p-2 text-black rounded-[6px] hover:bg-indigo-200">En savoir plus</button>
+            </div>
+        </div>
+    </header>
+   
+    <div class="relative py-70  bg-cover bg-center bg-no reapet " style="background-image: url('image/A-4.jpg');">
+      <div class="flex  flex-col justify-center items-center text-white"> 
+          <h1 class="text-2xl font-bold md:text-4xl font-bold lg:text-6xl font-bold uppercase ">EBUY Sport Sénégal</h1>
              <p class="pt-5 text-white text-normal px-35 font-sans md:text-1xl md:px-50 font-sans font-medium lg:text-2xl">
-                Bienvenue chez UniSport Sénégal, votre nouvelle destination 
+                Bienvenue chez EBUY Sénégal, votre nouvelle destination 
                 incontournable pour des tenues de sport qui ne font aucun compromis
             </p>
-     </div>
-</header>
+      </div>
+    </div>
 
 
    <section class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8 gap-8  p-8 bg-gray-200  mt-30 md:mt-20 sm:mt-10">
         <div class="bg-white  shadow-lg p-4 mx-4 md:my-8 hover:scale-105 rounded-xl"> 
             <a href="#" class="">
-                <img src="image/sport-femm.jpg" class=" w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="Montre connectée">
+                <img src="image/sport-femm.jpg" class=" w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="sport pour femme">
             </a>
             <h2 class="text-xl font-bold my-3">Le meilleur ensemble de sport pour femme :</h2>
             <p class="text-sm"> Tenue de Yoga, Leggings de Fitness et Vêtements d'Entraînement.
                  Une série complète Performance & Course à pied pour 2021.".</p>
             <p class="mt-2">⭐ 1.8 <span class="opacity-70">(400 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">15 000 FCFA</p>
-            <button class="bg-black text-white rounded-xl p-2 w-full mt-5">Ajouter au panier</button>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-2.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover" alt="Montre connectée">
+                <img src="image/sport-2.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover" alt="Ensemble Hoody Nike">
             </a>
             <h2 class="text-xl font-bold my-5">Ensemble Hoody Nike Premium Blanc</h2>
             <p>Restez stylée et confortable avec cet ensemble Nike blanc comprenant
                  un sweat à capuche (hoody) et un pantalon assorti.</p>
             <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">5 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-5 ">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-3.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="Montre connectée">
+                <img src="image/sport-3.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="Ensemble sport Nic">
             </a>
-            <h2 class="text-xl font-bold my-3">Ensemble sport nic</h2>
+            <h2 class="text-xl font-bold my-3">Ensemble sport Nic</h2>
             <p> C'est le terme tendance pour les vêtements de détente confortables portés à la maison.</p>
             <p class="mt-2">⭐ 2.6 <span class="opacity-70">(700 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">20 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-6">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-6 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-4.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="Montre connectée">
+                <img src="image/sport-4.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl " alt="Pantalon (coton)">
             </a>
             <h2 class="text-xl font-bold my-5">Pantalon (coton)</h2>
             <p>1 pièce Pantalon de sport décontracté, léger, respirant </p>
             <p class="mt-2">⭐ 3.9 <span class="opacity-70">(300 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">10 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-5.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="Montre connectée">
+                <img src="image/sport-5.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="fitness et gym">
             </a>
             <h2 class="text-xl font-bold my-2"> fitness et gym  </h2>
             <p>Ensemble de Sport avec Passe-pouces,<br> Zip et Taille Haute .</p>
             <p class="mt-2">⭐ 6.4 <span class="opacity-70">(800 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">7 500 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-6.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover " alt="Montre connectée">
+                <img src="image/sport-6.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover " alt="maillot pour hommes">
             </a>
             <h2 class="text-xl font-bold my-2">maillot pour hommes</h2>
             <p>Ensemble de maillot sport pour homme style petit ami,<br> T-shirt à séchage rapide et shorts.</p>
             <p class="mt-2">⭐ 8.3 <span class="opacity-70">(100 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">12 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-7.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="Montre connectée">
+                <img src="image/sport-7.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="tenue de sport">
             </a>
             <h2 class="text-xl font-bold my-3">tenue de sport complete</h2>
             <p>Une tenue de sport gainante et extensible pour une
             liberté de mouvement totale durant vos séances de fitness ou de yoga.</p>
             <p class="mt-2">⭐ 4.7 <span class="opacity-70">(400 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">25 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-5">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
         </div>
 
         <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
             <a href="#" class="">
-                <img src="image/sport-8.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="Montre connectée">
+                <img src="image/sport-8.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl" alt="KING JAMES">
             </a>
             <h2 class="text-xl font-bold my-1">KING JAMES</h2>
             <p>2020 LA Lakers Purple White Basketball Jersey Designs.</p>
             <p class="mt-2">⭐ 5.5 <span class="opacity-70">(600 avis)</span></p>
             <p class="text-blue-500 font-bold mt-2">8 000 FCFA</p>
-            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4">Ajouter au panier</button>
+            <button  class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
         </div>
-
-         
+ 
     </section>
+
+      <div class="flex justify-center gap-20 pt-10  pb-5 bg-[#f1f1f1] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class=" flex flex-col justify-center items-center">
+                <div class="bg-blue-400 text-center w-20 rounded-[100%] text-3xl p-5 ">📷</div>
+                <p class="font-bold text-lg tracking-wider pt-7">Recherche par image </p>
+                <p class="text-center tracking-wider pt-5">Trouvez des produits <br>simulaire en prenant <br> simplement
+                    une
+                    photo</p>
+            </div>
+            <div class=" flex flex-col justify-center items-center">
+                <div class=" bg-green-400 text-center w-20 rounded-[100%] text-3xl p-5 ">360°</div>
+                <p class="font-bold text-lg tracking-wider pt-7">vue 360°</p>
+                <p class="text-center tracking-wider pt-5">Explorez les produits sous tous <br> les angles avant
+                    d'achater
+                    <br>
+                    pour une meilleure vision
+                </p>
+            </div>
+            <div class=" flex flex-col justify-center items-center">
+                <div class=" bg-red-400 text-center w-20 rounded-[100%] text-3xl p-5 ">🎯</div>
+                <p class="font-bold text-lg tracking-wider pt-7">Personnalisé</p>
+                <p class="text-center tracking-wider pt-5">Recommandations baseés sur <br> vos préferences et votre <br>
+                    historique
+                </p>
+            </div> 
+        </div>  
 
 </body>
 </html>
