@@ -120,19 +120,79 @@
             </div>
         </div>
          
-    </nav>
+    <nav class="bg-blue-400 w-full h-15 fixed w-full top-0 z-50 shadow-md">
+        <!-- Checkbox (doit être ici en premier) -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-  
-   
-    <div class="relative py-70  bg-cover bg-center bg-no reapet " style="background-image: url('image/A-4.jpg');">
-      <div class="flex  flex-col justify-center items-center text-white"> 
-          <h1 class="text-2xl font-bold md:text-4xl font-bold lg:text-6xl font-bold uppercase ">EBUY Sport Sénégal</h1>
-             <p class="pt-5 text-white text-normal px-35 font-sans md:text-1xl md:px-50 font-sans font-medium lg:text-2xl">
-                Bienvenue chez EBUY Sénégal, votre nouvelle destination 
-                incontournable pour des tenues de sport qui ne font aucun compromis
-            </p>
-      </div>
-    </div>
+        <div class="flex justify-around items-center mx-5 ">
+            <div class="bg-[url('image/logo.png')] bg-cover w-[85px] h-[70px]  ">
+
+            </div>
+            <div class="flex items-center sm:w-[300px]  lg:w-[400px] md:w-full w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+                <!-- Input texte -->
+                <input type="text" placeholder="Rechercher un produit..."
+                    class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+                <!-- Recherche par image -->
+                <label for="image-search" class="cursor-pointer text-xl mr-2">
+                    📷
+                </label>
+                <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+                <!-- Bouton recherche -->
+                <button class="text-lg">
+                    🔍
+                </button>
+            </div>
+            <!-- Checkbox cachée -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <!-- Bouton Hamburger -->
+            <label for="menu-toggle"
+                class="md:hidden  text-3xl cursor-pointer relative w-8 h-8 flex items-center justify-center">
+
+                <!-- Icône ☰ -->
+                <span class="absolute transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-0">
+                    ☰
+                </span>
+
+            </label>
+
+            <div class="hidden md:flex flex gap-5 justify-center text-white font-bold">
+                <a href="">ACCUEIL</a>
+                <a href="">SERVICE</a>
+                <a href="">ACCESSOIRE</a>
+                <a href="">MODE</a>
+                <a class=" px-5  bg-white " href="">🛒</a>
+
+
+
+                <button class="px-5 text-black bg-white">connexion</button>
+
+
+            </div>
+
+
+        </div>
+        <!-- Menu Mobile Slide -->
+        <div class="md:hidden fixed top-0 right-0 h-screen w-64 bg-gray-50 
+               transform translate-x-full peer-checked:translate-x-0
+               transition-transform duration-300 ease-in-out
+               p-6 space-y-6 font-semibold">
+
+            <label for="menu-toggle" class="text-2xl cursor-pointer block text-right">✖</label>
+
+            <a href="#" class="block hover:text-yellow-300">ACCUEIL</a>
+            <a href="#" class="block hover:text-yellow-300">SERVICE</a>
+            <a href="#" class="block hover:text-yellow-300">ACCESSOIRE</a>
+            <a href="#" class="block hover:text-yellow-300">MODE</a>
+            <a class="block bg-white text-black px-4 py-2 rounded">🛒 Panier</a>
+            <button class="w-full bg-white text-black px-4 py-2 rounded">Connexion</button>
+        </div>
+
+    </nav>
 
 
    <section class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8 gap-8  p-8 bg-gray-200  mt-30 md:mt-20 sm:mt-10">
