@@ -10,6 +10,83 @@
 
 <body>
 
+     
+     <nav class="bg-blue-400 w-full h-15 fixed w-full top-0 z-50 shadow-md">
+        <!-- Checkbox (doit être ici en premier) -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+        <div class="flex justify-around items-center mx-5 ">
+            <div class="bg-[url('image/logo.png')] bg-cover w-[85px] h-[70px]  ">
+
+            </div>
+            <div class="flex items-center sm:w-[300px]  lg:w-[400px] md:w-full w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+                <!-- Input texte -->
+                <input type="text" placeholder="Rechercher un produit..."
+                    class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+                <!-- Recherche par image -->
+                <label for="image-search" class="cursor-pointer text-xl mr-2">
+                    📷
+                </label>
+                <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+                <!-- Bouton recherche -->
+                <button class="text-lg">
+                    🔍
+                </button>
+            </div>
+            <!-- Checkbox cachée -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <!-- Bouton Hamburger -->
+            <label for="menu-toggle"
+                class="md:hidden  text-3xl cursor-pointer relative w-8 h-8 flex items-center justify-center">
+
+                <!-- Icône ☰ -->
+                <span class="absolute transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-0">
+                    ☰
+                </span>
+
+            </label>
+
+            <div class="hidden md:flex flex gap-5 justify-center text-white font-bold">
+                <a href="">ACCUEIL</a>
+                <a href="">SERVICE</a>
+                <a href="">ACCESSOIRE</a>
+                <a href="">MODE</a>
+                <a class=" px-5  bg-white " href="">🛒</a>
+
+
+
+                <button class="px-5 text-black bg-white">connexion</button>
+
+
+            </div>
+
+
+        </div>
+        <!-- Menu Mobile Slide -->
+        <div class="md:hidden fixed top-0 right-0 h-screen w-64 bg-gray-50 
+               transform translate-x-full peer-checked:translate-x-0
+               transition-transform duration-300 ease-in-out
+               p-6 space-y-6 font-semibold">
+
+            <label for="menu-toggle" class="text-2xl cursor-pointer block text-right">✖</label>
+
+            <a href="#" class="block hover:text-yellow-300">ACCUEIL</a>
+            <a href="#" class="block hover:text-yellow-300">SERVICE</a>
+            <a href="#" class="block hover:text-yellow-300">ACCESSOIRE</a>
+            <a href="#" class="block hover:text-yellow-300">MODE</a>
+            <a class="block bg-white text-black px-4 py-2 rounded">🛒 Panier</a>
+            <button class="w-full bg-white text-black px-4 py-2 rounded">Connexion</button>
+        </div>
+
+    </nav>
+
+
+
     <div class="w-full">
         <img src="image/accessoires.jpeg" class="object-cover w-full h-64 sm:h-80 md:h-96 lg:h-[28rem]" alt="Image produit">
     </div>
