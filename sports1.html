@@ -5,18 +5,413 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style type="text/tailwindcss">
-        @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
-</head>
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind CSS</title>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                            vert: '#32a852',
+                            blanc: '#f7faf8',
+                            rouge: '#d10210',
+                            meuve: '#8902d1',
+                            blanc: '#faf7f8',
+                            bleu: '#0b1bd4',
+                            black: '#0a0a0a',
+                            zone: '#d9d507',
+                            orange: '#d95707',
+                            siro: "#0cd2e8",
+                            gris: "#4a4f4b",
+                            gris_clair: "#ededed",
+                            vert_d: "#a4bdab",
+                        },
+                        backgroundImage: {
+                            profil: "url('images_tlwd/profil-0.png')",
+                        },
+                        boxShadow: {
+                            bs: "2px 10px 10px 8px rgba(15, 15, 15,0.5)",
+                        },
+                        borderWidth: {
+                            bw: "8px",
+                        },
+                        borderColor: {
+                            bc: "#d4830b",
+                            bl: "#344ceb",
+                            siro: "#0cd2e8",
+                        },
+                        borderRadius: {
+                            br: "20px",
+                            brfl: "9999px",
+                        },
+                        margin: {
+                            mg: "40px",
+                        },
+                        padding: {
+                            pdg: "40px",
+                        },
+                        height: {
+                            ht: "350px",
+                        },
+                        width: {
+                            wd: "40%",
+                        },
+                        gap: {
+                            gp: "16",
+                        },
+                    }
+                }
+            }
+        </script>
+    </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-        Hello world!
-    </h1>
+
+
+    <nav class="bg-blue-400 w-full h-18 fixed w-full top-0 z-50 shadow-md">
+        <!-- Checkbox (doit être ici en premier) -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+        <div class="flex justify-around items-center mx-5 ">
+            <div class="bg-[url('logo.png')] bg-cover w-[85px] h-[70px]  ">
+
+            </div>
+            <div class="flex items-center sm:w-[300px]  lg:w-[400px] md:w-full w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+                <!-- Input texte -->
+                <input type="text" placeholder="Rechercher un produit..."
+                    class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+                <!-- Recherche par image -->
+                <label for="image-search" class="cursor-pointer text-xl mr-2">
+                    📷
+                </label>
+                <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+                <!-- Bouton recherche -->
+                <button class="text-lg">
+                    🔍
+                </button>
+            </div>
+            <!-- Checkbox cachée -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <!-- Bouton Hamburger -->
+            <label for="menu-toggle"
+                class="md:hidden  text-3xl cursor-pointer relative w-8 h-8 flex items-center justify-center">
+
+                <!-- Icône ☰ -->
+                <span class="absolute transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-0">
+                    ☰
+                </span>
+
+            </label>
+
+            <div class="hidden md:flex flex gap-5 justify-center text-white font-bold">
+                <a href="index.html">ACCUEIL</a>
+                <a href="sports1.html">SPORTS</a>
+                <a href="accessoires1.html">ACCESSOIRE</a>
+                <a href="mode.html">MODE</a>
+                <a class=" px-5  bg-white " href="">🛒</a>
+                <button class="px-5 text-black bg-white">connexion</button>
+            </div>
+        </div>
+        <!-- Menu Mobile Slide -->
+        <div class="md:hidden fixed top-0 right-0 h-screen w-64 bg-gray-50 
+               transform translate-x-full peer-checked:translate-x-0
+               transition-transform duration-300 ease-in-out
+               p-6 space-y-6 font-semibold">
+
+            <label for="menu-toggle" class="text-2xl cursor-pointer block text-right">✖</label>
+
+            <a href="#" class="block hover:text-yellow-300">ACCUEIL</a>
+            <a href="#" class="block hover:text-yellow-300">SERVICE</a>
+            <a href="#" class="block hover:text-yellow-300">ACCESSOIRE</a>
+            <a href="#" class="block hover:text-yellow-300">MODE</a>
+            <a class="block bg-white text-black px-4 py-2 rounded">🛒 Panier</a>
+            <button class="w-full bg-white text-black px-4 py-2 rounded">Connexion</button>
+        </div>
+
+    </nav>
+
+    <section class="relative py-70 bg-cover bg-center" style="background-image: url('image/A.jpg');">
+
+        <div class="absolute inset-0 g bg-opacity-60"></div>
+        <div class="container mx-auto px-4 relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+            <div>
+
+    </section>
+
+
+    <section
+        class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8 gap-8  p-8 bg-gray-200  mt-30 md:mt-20 sm:mt-10">
+
+
+        <div class="bg-white  shadow-lg p-4 mx-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-femm.jpg" class=" w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl "
+                    alt="sport pour femme">
+            </a>
+            <h2 class="text-xl font-bold my-3">Le meilleur ensemble de sport pour femme :</h2>
+            <p class="text-sm"> Tenue de Yoga, Leggings de Fitness<br> et Vêtements d'Entraînement.</p>
+            <p class="mt-2">⭐ 1.8 <span class="opacity-70">(400 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">15 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-2.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover" alt="Ensemble Hoody Nike">
+            </a>
+            <h2 class="text-xl font-bold my-5">Ensemble Hoody Nike Premium Blanc</h2>
+            <p>Restez stylée et confortable avec cet ensemble<br> Nike blanc comprenant.</p>
+            <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">5 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <!-- BADGE -->
+            <span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-4 py-2 rounded-full z-10">
+                Promo
+            </span>
+            <!-- FAVORIS -->
+            <div class="absolute top-3 right-3 bg-white p-3 rounded-full shadow cursor-pointer z-10
+                    hover:scale-110 transition">
+                ❤️
+            </div>
+            <a href="sports.html" class="block overflow-hidden rounded-xl">
+                <img src="image/sport-3.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover 
+                transition duration-00 group-hover:scale-110" alt="Ensemble Hoody Nike">
+            </a>
+
+            <h2 class="text-xl font-bold my-5">Ensemble Hoody Nic</h2>
+            <p>Le tissu extensible facilite les mouvements <br>pendant l’entraînement.</p>
+            <p class="mt-2">⭐ 2.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">20 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-4.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl "
+                    alt="Pantalon (coton)">
+            </a>
+            <h2 class="text-xl font-bold my-5">Pantalon (coton)</h2>
+            <p>1 pièce Pantalon de sport décontracté,<br> léger, respirant. </p>
+            <p class="mt-2">⭐ 3.9 <span class="opacity-70">(300 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">10 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-5.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl"
+                    alt="fitness et gym">
+            </a>
+            <h2 class="text-xl font-bold my-2"> fitness et gym </h2>
+            <p>Ensemble de Sport avec Passe-pouces, Zip et Taille Haute .</p>
+            <p class="mt-2">⭐ 6.4 <span class="opacity-70">(800 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">7 500 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <!-- BADGE -->
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-4 py-2 rounded-full z-10">
+                    Promo
+                </span>
+                <!-- FAVORIS -->
+                <div class="absolute top-3 right-3 bg-white p-3 rounded-full shadow cursor-pointer z-10
+                    hover:scale-110 transition">
+                    ❤️
+                </div>
+                <img src="image/sport-6.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover "
+                    alt="maillot pour hommes">
+            </a>
+            <h2 class="text-xl font-bold my-2">maillot pour hommes</h2>
+            <p> maillot sport pour homme style ,<br> T-shirt à séchage rapide et shorts.</p>
+            <p class="mt-2">⭐ 8.3 <span class="opacity-70">(100 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">12 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-7.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover "
+                    alt="maillot pour hommes">
+            </a>
+            <h2 class="text-xl font-bold my-2">tenue sport complete</h2>
+            <p> Un choix parfait pour rester stylée tout en faisant du sport .</p>
+            <p class="mt-2">⭐ 8.3 <span class="opacity-70">(100 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">13 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white md-xl shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-8.jpg" class="w-full h-40 sm:h-44 md:h-48 object-cover rounded-xl"
+                    alt="KING JAMES">
+            </a>
+            <h2 class="text-xl font-bold my-2">king james</h2>
+            <p>2020 LA Lakers Purple White Basketball Jersey Designs.</p>
+            <p class="mt-2">⭐ 5.5 <span class="opacity-70">(600 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">8 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-4 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+
+                <!-- BADGE -->
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-4 py-2 rounded-full z-10">
+                    Promo
+                </span>
+
+                <!-- FAVORIS -->
+                <div class="absolute top-3 right-3 bg-white p-3 rounded-full shadow cursor-pointer z-10
+                    hover:scale-110 transition">
+                    ❤️
+                </div>
+
+                <img src="image/sport-11 (1).jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover"
+                    alt="Ensemble Hoody Nike">
+            </a>
+            <h2 class="text-xl font-bold my-5">Ensemble Hoody Nike Premium Blanc</h2>
+            <p>Women's Amalie Elevate Active Set<br> in Black Size Medium.</p>
+            <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">16 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-12.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover"
+                    alt="Ensemble Hoody Nike">
+            </a>
+            <h2 class="text-xl font-bold my-5">Confort et performance</h2>
+            <p>
+                Un ensemble sportif conçu avec un tissu doux et respirantLe design .</p>
+            <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">22 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <img src="image/sport-13.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover"
+                    alt="Ensemble Hoody Nike">
+            </a>
+            <h2 class="text-xl font-bold my-5">Style fitness tendance</h2>
+            <p>Une tenue moulante confortable qui met la silhouette en valeur.
+                Le tissu zt extensible 💫.</p>
+            <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">125 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+
+        <div class="bg-white shadow-lg p-4 md:my-8 hover:scale-105 rounded-xl">
+            <a href="#" class="">
+                <!-- BADGE -->
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-4 py-2 rounded-full z-10">
+                    Promo
+                </span>
+                <!-- FAVORIS -->
+                <div class="absolute top-3 right-3 bg-white p-3 rounded-full shadow cursor-pointer z-10
+                    hover:scale-110 transition">
+                    ❤️
+                </div>
+                <img src="image/sport-14.jpg" class="w-full h-40 sm:h-40 md:h-48 object-cover"
+                    alt="Ensemble Hoody Nike">
+            </a>
+            <h2 class="text-xl font-bold my-5">Tenue sportive élégante</h2>
+            <p>✨ Tenue sportive élégante Une tenue de sport moderne composée
+                d’un legging taille haute .</p>
+            <p class="mt-2">⭐ 4.7 <span class="opacity-70">(900 avis)</span></p>
+            <p class="text-blue-500 font-bold mt-2">13000 000 FCFA</p>
+            <button class="bg-black text-white rounded-xl p-2 w-full mt-5 hover:bg-gris">Ajouter au panier</button>
+        </div>
+
+    </section>
+
+    <footer class="bg-gray-500 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+                <!-- EBUY info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-400 mb-4">EBUY</h2>
+                    <p class="text-sm text-gray-100">
+                        Les meilleurs produits mode, accessoires et sport. Livraison rapide & service fiable.
+                    </p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Liens</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-300">Accueil</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Produits</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Accessoires</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Mode</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-300">FAQ</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Contactez‑nous</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Livraison & Retours</a></li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Suivez‑nous</h3>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white mt-8 pt-4 text-center text-sm text-gray-200">
+                &copy; 2026 EBUY — Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
+
 
 </body>
 
