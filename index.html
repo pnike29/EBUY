@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
     <style type="text/tailwindcss">
         @theme {
@@ -14,9 +16,1512 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-        Hello world!
-    </h1>
+
+    <nav class="bg-blue-400 w-full h-15 fixed w-full top-0 z-50 shadow-md">
+        <!-- Checkbox (doit être ici en premier) -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+        <div class="flex justify-around items-center mx-5 ">
+            <div class="bg-[url('image/logo.png')] bg-cover w-[85px] h-[70px] rounded-[20px] ">
+
+            </div>
+            <div class="flex items-center sm:w-[300px]  lg:w-[400px] md:w-full w-full  max-w-md bg-gray-100 rounded-full mt-2 px-4 py-2
+            focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-600">
+
+                <!-- Input texte -->
+                <input type="text" placeholder="Rechercher un produit..."
+                    class="flex-1 bg-transparent outline-none text-sm placeholder-gray-500" />
+
+                <!-- Recherche par image -->
+                <label for="image-search" class="cursor-pointer text-xl mr-2">
+                    📷
+                </label>
+                <input type="file" id="image-search" accept="image/" class="hidden" * />
+
+                <!-- Bouton recherche -->
+                <button class="text-lg">
+                    🔍
+                </button>
+            </div>
+            <!-- Checkbox cachée -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <!-- Bouton Hamburger -->
+            <label for="menu-toggle"
+                class="md:hidden  text-3xl cursor-pointer relative w-8 h-8 flex items-center justify-center">
+
+                <!-- Icône ☰ -->
+                <span class="absolute transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-0">
+                    ☰
+                </span>
+
+            </label>
+
+            <div class="hidden md:flex flex gap-5 justify-center text-white font-bold ">
+                <a href="index.html">ACCUEIL</a>
+                <a href="sports.html">Sport</a>
+                <a href="accessoires.html">ACCESSOIRE</a>
+                <a href="mode.html">MODE</a>
+                <a class=" px-5  bg-white " href="panier.html">🛒</a>
+
+
+
+                <a href="contact.html" class="px-5 text-black bg-white">connexion</a>
+
+
+            </div>
+
+
+        </div>
+        <!-- Menu Mobile Slide -->
+        <div class="md:hidden fixed top-0 right-0 h-screen w-64 bg-gray-50 
+               transform translate-x-full peer-checked:translate-x-0
+               transition-transform duration-300 ease-in-out
+               p-6 space-y-6 font-semibold ">
+
+            <label for="menu-toggle" class="text-2xl cursor-pointer block text-right">✖</label>
+
+            <a href="index.html" class="block hover:text-yellow-300">ACCUEIL</a>
+            <a href="sports.html" class="block hover:text-yellow-300">Sport</a>
+            <a href="accessoires.html" class="block hover:text-yellow-300">ACCESSOIRE</a>
+            <a href="mode.html" class="block hover:text-yellow-300">MODE</a>
+            <a href="panier.html" class="block bg-white text-black px-4 py-2 rounded">🛒 Panier</a>
+            <a href="contact.html" class="w-full bg-white text-black px-4 py-2 rounded">Connexion</a>
+        </div>
+
+    </nav>
+    <!-- debut hidden -->
+
+
+
+
+
+    <!-- Radios pour chaque produit -->
+
+    <input type="radio" name="produit" id="prod1" class="peer/prod1 hidden">
+    <input type="radio" name="produit" id="prod2" class="peer/prod2 hidden">
+    <input type="radio" name="produit" id="prod3" class="peer/prod3 hidden">
+    <input type="radio" name="produit" id="prod4" class="peer/prod4 hidden">
+    <input type="radio" name="produit" id="prod5" class="peer/prod5 hidden">
+    <input type="radio" name="produit" id="prod6" class="peer/prod6 hidden">
+    <input type="radio" name="produit" id="prod7" class="peer/prod7 hidden">
+    <input type="radio" name="produit" id="prod8" class="peer/prod8 hidden">
+    <input type="radio" name="produit" id="prod9" class="peer/prod9 hidden">
+    <input type="radio" name="produit" id="accueil" class="peer/accueil hidden" checked>
+
+
+    <!-- Page d'accueil : liste des produits -->
+
+    <div class="block peer-checked/prod1:hidden peer-checked/prod2:hidden peer-checked/prod3:hidden
+        peer-checked/prod4:hidden peer-checked/prod5:hidden peer-checked/prod6:hidden peer-checked/prod7:hidden
+        peer-checked/prod8:hidden peer-checked/prod9:hidden ">
+
+        <header class="bg-gradient-to-r from-blue-400 via-pink-400 to-blue-400 w-full h-[350px] ">
+            <div class="flex flex-col items-center justify-center text-white pt-40 ">
+
+                <div>
+                    <h1 class="text-5xl font-bold pb-3 text-center">Bienvenue sur Ebuy</h1>
+                    <p class="pb-3 text-center">Découvrez des milliers de produits avec notre recherche par image
+                        innovante
+                        <br>et une experience d'achat immersive à 360°
+                    </p>
+                </div>
+                <div>
+                    <button class="bg-white p-2 text-black ">En savoir plus</button>
+                </div>
+            </div>
+
+        </header>
+        <section>
+            <div
+                class="flex   pt-10  pb-5 bg-[#f1f1f1] flex-col md:flex-row  justify-center items-center gap-10 md:gap-20  px-6 md:px-16">
+
+                <div class=" flex flex-col justify-center items-center">
+                    <div class="bg-blue-400 text-center w-20 rounded-[100%] text-3xl p-5 ">📷</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">Recherche par image </p>
+                    <p class="text-center tracking-wider pt-5">Trouvez des produits <br>simulaire en prenant <br>
+                        simplement
+                        une
+                        photo</p>
+                </div>
+                <div class=" flex flex-col justify-center items-center">
+                    <div class=" bg-green-400 text-center w-20 rounded-[100%] text-3xl p-5 ">360</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">vue 360°</p>
+                    <p class="text-center tracking-wider pt-5">Explorez les produits sous tous <br> les angles avant
+                        d'achater
+                        <br>
+                        pour une meilleure vision
+                    </p>
+                </div>
+                <div class=" flex flex-col justify-center items-center">
+                    <div class=" bg-red-400 text-center w-20 rounded-[100%] text-3xl p-5 ">🎯</div>
+                    <p class="font-bold text-lg tracking-wider pt-7">Personnalisé</p>
+                    <p class="text-center tracking-wider pt-5">Recommandations baseés sur <br> vos préferences et votre
+                        <br>
+                        historique
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <h1 class="text-2xl font-bold mb-6 pt-[100px] underline pl-5 uppercase">Catalogue de produits</h1>
+
+        <!-- dedut articel -->
+
+        <div
+            class=" grid gap-5  bg-[#f1f1f1]   grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4   p-6 md:p-12 ">
+            <label for="prod1">
+
+                <div class=" w-70 bg-white pb-5  shadow-shado hover:shadow-lg transition duration-500">
+                    <div class="bg-[url('image/1.jpg')] bg-cover  bg-center  w-70 h-[220px] ">
+                        <p class="text-gray-600"></p>
+                    </div>
+                    <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">Electronique</p>
+                    <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy Book4</h3>
+                    <p class="opacity-70 pl-4 pt-1">Samsung Galaxy Book4 15.6 – i7 – 16 Go RAM – 512 Go SSD –
+                        Performance
+                    </p>
+                    <div class="pl-4 ">
+                        <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                        <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">625 000 CFA</p>
+                        <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au Panier</button>
+                    </div>
+
+                </div>
+            </label>
+
+            <label ">
+
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class="bg-[url('https://i.pinimg.com/1200x/e8/b9/9f/e8b99f0811773abc43efa855a5521cbf.jpg')] bg-cover  bg-center  w-70 h-[220px] ">
+                    <p class="text-gray-600"></p>
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">Electronique</p>
+                <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy s23</h3>
+                <p class="opacity-70 pl-4 pt-1">Samsung SIM FREE Galaxy S23 Ultra 5G 256GB - Cream
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">485 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au Panier</button>
+                </div>
+
+        </div>
+        </label>
+
+        <!-- iphone -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod2">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class="bg-blue-400 w-70 h-[220px] ">
+                    <div class="bg-black w-full h-full">
+                        <img src="image/iphone.jpg" alt="" class="w-full h-full">
+                    </div>
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">Electronique</p>
+                <h3 class="font-bold pl-4 pt-2s">iPhone 17 Pro Max</h3>
+                <p class="opacity-70 pl-4 pt-1">Apple iPhone 17 Pro Max – 256 Go – Écran 6.9 – Puce A19 Pro – Orange
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.7 <span class="opacity-80">(345 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">925 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- 
+       samsung      -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod3">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class=" w-70 h-[220px] ">
+                    <div class="bg-black w-full h-full">
+                        <img src="image/samsung.jpg" alt="" class="w-full h-full">
+                    </div>
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">Electronique</p>
+                <h3 class="font-bold pl-4 pt-2s">Samsung Galaxy S25</h3>
+                <p class="opacity-70 pl-4 pt-1">Samsung Galaxy S25 Ultra 5G –512 Go – 12 Go RAM – Écran 120 Hz -
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.9 <span class="opacity-80">(845 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">760 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!--mode  -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod4">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class=" bg-[url('image/mode2.jpg')] bg-cover bg-center w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Ensemble 3 pieces</h3>
+                <p class="opacity-70 pl-4 pt-1">Ensemble de 3 pièces pour adolescent une chemise
+                    un short et un chapeau
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.0 <span class="opacity-80">(145 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">15 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod5">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class="bg-[url('image/mode.jpg')] bg-cover bg- w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Cardigan tricoté</h3>
+                <p class="opacity-70 pl-4 pt-1">vêtement en tricot à devant ouvert, souvent porté comme une veste
+                    légère
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">40 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod6">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class="bg-[url('https://i.pinimg.com/736x/f4/1b/45/f41b4571327d16e3a173aeb1a655b21d.jpg')] bg-cover bg-center  w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">chemise Africain</h3>
+                <p class="opacity-70 pl-4 pt-1">chemise en art , souvent porté comme une veste
+                    légère
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.1 <span class="opacity-80">(45 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">25 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+
+
+
+        <label>
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class=" bg-[url('https://i.pinimg.com/736x/88/c7/c9/88c7c91944e7f46451a9fa13604756df.jpg')] bg-cover bg-center w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Ensemble 3 pieces</h3>
+                <p class="opacity-70 pl-4 pt-1">Ensemble de 3 pièces pour adolescent une chemise
+                    un short et un chapeau
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.0 <span class="opacity-80">(145 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">15 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label>
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class="bg-[url('https://i.pinimg.com/736x/96/0e/22/960e22535b78b20cde50e63728d8a7f7.jpg')] bg-cover bg- w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Cardigan tricoté</h3>
+                <p class="opacity-70 pl-4 pt-1">vêtement en tricot à devant ouvert, souvent porté comme une veste
+                    légère
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">40 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label for="prod6">
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class="bg-[url('https://i.pinimg.com/736x/7d/8b/ae/7d8bae8e27140a6db9988706ab6cdaa2.jpg')] bg-cover bg-center  w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">chemise Africain</h3>
+                <p class="opacity-70 pl-4 pt-1">chemise en art , souvent porté comme une veste
+                    légère
+                </p>
+                <div>
+                    <p class="pt-2">⭐ 4.1 <span class="opacity-80">(45 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">85 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+
+
+        <label>
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class=" bg-[url('image/mode2.jpg')] bg-cover bg-center w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Ensemble 3 pieces</h3>
+                <p class="opacity-70 pl-4 pt-1">Ensemble de 3 pièces pour adolescent une chemise
+                    un short et un chapeau
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.0 <span class="opacity-80">(145 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">15 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label>
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div class="bg-[url('image/mode.jpg')] bg-cover bg- w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">vetement</p>
+                <h3 class="font-bold pl-4 pt-2s">Cardigan tricoté</h3>
+                <p class="opacity-70 pl-4 pt-1">vêtement en tricot à devant ouvert, souvent porté comme une veste
+                    légère
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">40 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label>
+            <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+                <div
+                    class="bg-[url('https://i.pinimg.com/736x/a2/12/8e/a2128ec0d75f37dd1f58e5fa738a89ed.jpg')] bg-cover bg-  w-70 h-[220px] ">
+
+                </div>
+                <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">sport</p>
+                <h3 class="font-bold pl-4 pt-2s">kits sport</h3>
+                <p class="opacity-70 pl-4 pt-1">kits sport pratiquable à la maison pour debudant ,
+                </p>
+                <div class="pl-4 ">
+                    <p class="pt-2">⭐ 4.8 <span class="opacity-80">(045 avis)</span></p>
+                    <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">10 000 CFA</p>
+                    <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                        Panier</button>
+                </div>
+            </div>
+        </label>
+        <!-- deuxiem -->
+        <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+        <label ">
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+            <div class="bg-[url('image/sport2.jpg')] bg-cover  bg-center w-70 h-[220px] ">
+
+            </div>
+            <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">sport</p>
+            <h3 class="font-bold pl-4 pt-2s">Casque Schutt F7 VTD Universitaire</h3>
+            <p class="opacity-70 pl-4 pt-1">Casque de football américain
+                conçu pour absorber les chocs
+            </p>
+            <div class="pl-4 ">
+                <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+                <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">326 688 CFA</p>
+                <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                    Panier</button>
+            </div>
+    </div>
+    </label>
+    <!-- deuxiem -->
+    <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+    <label for="prod7">
+        <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+            <div class="bg-[url('image/sport.jpg')] bg-cover bg-  w-70 h-[220px] ">
+
+            </div>
+            <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">sport</p>
+            <h3 class="font-bold pl-4 pt-2s">Gants de gardien Classic</h3>
+            <p class="opacity-70 pl-4 pt-1">Gants de gardien classiques de la marque Adidas,
+            </p>
+            <div class="pl-4 ">
+                <p class="pt-2">⭐ 4.8 <span class="opacity-80">(045 avis)</span></p>
+                <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">13 000 CFA</p>
+                <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                    Panier</button>
+            </div>
+        </div>
+    </label>
+    <!-- deuxiem -->
+    <!-- <div class="flex gap-7 flex-col md:flex-row bg-[#f1f1f1] pt-2 "> -->
+    <label ">
+                <div class=" w-70 bg-white pb-5 shadow-shado hover:shadow-lg transition duration-500">
+        <div
+            class="bg-[url('https://i.pinimg.com/1200x/6c/6a/79/6c6a79e3d4cc9d66a21e7a981b0c5d64.jpg')] bg-cover  bg-center w-70 h-[220px] ">
+
+        </div>
+        <p class="bg-[#f1f1f1] w-[90px] mt-2 ml-4">sport</p>
+        <h3 class="font-bold pl-4 pt-2s">Ensemble pour sport</h3>
+        <p class="opacity-70 pl-4 pt-1">Ensemble pour sport adequat de tout type de sport
+        </p>
+        <div class="pl-4 ">
+            <p class="pt-2">⭐ 4.8 <span class="opacity-80">(245 avis)</span></p>
+            <p class="text-pri  text-xl text-blue-600 font-bold pb-2 pt-2">26 688 CFA</p>
+            <button class="bg-black text-white  rounded-[10px] w-[90%] p-1   ">🛒 Ajouter au
+                Panier</button>
+        </div>
+        </div>
+    </label>
+    </div>
+
+    <!-- fin article -->
+
+
+
+    </div>
+
+
+
+    <!-- Pages de détails produits -->
+
+
+    <!-- Produit 1 -->
+    <div class="hidden peer-checked/prod1:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden ">
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/samsung.jpg" alt="telephone samsung" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="https://i.pinimg.com/736x/24/22/32/24223258deb2711a6cfb6ffe2ba3b5e9.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="https://i.pinimg.com/736x/d5/11/ea/d511ea328f4c2c2e22ddc9d510e1dd19.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="https://i.pinimg.com/736x/99/fc/09/99fc0944418ea09fa1493d21efbb1c7c.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="https://i.pinimg.com/1200x/6f/cc/fd/6fccfdc623175432a706e7982ae32dc0.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">telephone
+                            samsung-galaxy-tab-a11-wifi-87-128-go-8-go-ram</h1>
+                        <p class="text-2xl font-semibold text-gray-700">760 000 FCFA</p>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- 5️⃣ SECTION avis client -->
+    <div class="hidden peer-checked/avisclients:block bg-white p-6 rounded-b-xl shadow">
+        <div class="gap-4 grid col-row">
+            <div class="border p-3">
+                <p class="pb-3"> ⭐⭐⭐⭐✩ <span class="font-bold ml-5 mr-5">client 1</span> <span class="opacity-70">Il
+                        y a
+                        1
+                        jours</span></p>
+                <p>Excellent produit! Très satisfait de mon achat. La qualité est au rendez-vous.</p>
+            </div>
+            <div class="border p-3">
+                <p class="pb-3"> ⭐⭐⭐⭐✩ <span class="font-bold ml-5 mr-5">client 1</span> <span class="opacity-70">Il
+                        y a
+                        1
+                        jours</span></p>
+                <p>Excellent produit! Très satisfait de mon achat. La qualité est au rendez-vous.</p>
+            </div>
+            <div class="border p-3">
+                <p class="pb-3"> ⭐⭐⭐⭐✩ <span class="font-bold ml-5 mr-5">client 1</span> <span class="opacity-70">Il
+                        y a
+                        1
+                        jours</span></p>
+                <p>Excellent produit! Très satisfait de mon achat. La qualité est au rendez-vous.</p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Produit 2 -->
+    <div class="hidden peer-checked/prod2:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden">
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Produit 3 -->
+    <div class="hidden peer-checked/prod3:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden ">
+
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Produit 4 -->
+    <div class="hidden peer-checked/prod4:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden ">
+
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Produit 5 -->
+    <div class="hidden peer-checked/prod5:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden">
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Produit 6 -->
+    <div class="hidden peer-checked/prod6:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden ">
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- Produit 7 -->
+    <div class="hidden peer-checked/prod7:block">
+
+
+        <!-- 1️⃣ Radios cachés (logique) -->
+        <input type="radio" name="page" id="description" class="peer/description hidden" checked>
+        <input type="radio" name="page" id="caracteristiques" class="peer/caracteristiques hidden">
+        <input type="radio" name="page" id="avisclients" class="peer/avisclients hidden">
+
+
+
+
+        <!-- 3️⃣ SECTION ACCUEIL -->
+        <div class="block peer-checked/profil:hidden peer-checked/contact:hidden ">
+
+            <div class="max-w-7xl mx-auto p-4 md:p-10 bg-white font-sans text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-30">
+
+
+                    <div>
+                        <div
+                            class="bg-gray-50 rounded-xl overflow-hidden  border border-gray-100 flex justify-center items-center p-8 mt-[12%]">
+                            <img src="image/sport-3.jpg" alt="sport pour femme" class="w-full h-auto object-contain">
+                        </div>
+
+
+                        <div class="flex gap-5 pt-30">
+                            <div class="w-20 h-20 border-2 border-blue-500 rounded-md p-1 cursor-pointer">
+                                <img src="image/sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-2.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-3.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="w-20 h-20 border border-gray-200 rounded-md p-1 cursor-pointer hover:border-gray-400">
+                                <img src="image/1sport-4.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-[10%]">
+                        <h1 class="text-3xl font-bold leading-tight">Tenue de sport pour les femmes</h1>
+                        <p class="text-2xl font-semibold text-gray-700">15 000 FCFA</p>
+
+                        <p class="text-gray-500 text-sm italic">Édition limitée en collaboration avec Ebuy. Design
+                            légendaire.
+                        </p>
+
+                        <div class="mt-4 ">
+                            <p class="text-sm font-medium mb-3">Pointure</p>
+                            <div class="grid grid-cols-5 gap-2 max-w-sm">
+
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">36</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">37</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">38</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">39</button>
+                                <button
+                                    class="py-2 border border-gray-200 bg-gray-50 text-gray-300 rounded cursor-not-allowed">40</button>
+
+                                <button class="py-2 bg-green-500 text-white rounded font-bold shadow-sm">41</button>
+
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">42</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">43</button>
+                                <button
+                                    class="py-2 border border-gray-300 hover:border-black rounded transition">44</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                            <button
+                                class="flex-1 bg-slate-900 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 ">
+                                    </path>
+                                </svg>
+                                🛒🛍️Ajouter au panier
+
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 text-white py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 
+            24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 
+            11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 
+            8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 
+            1.654zm6.757-4.103c1.551.921 3.06 1.383 4.686 1.384 5.438 0 9.863-4.425 
+            9.866-9.863.002-2.637-1.025-5.114-2.894-6.983s-4.346-2.895-6.983-2.896c-5.438 0-9.862 
+            4.425-9.865 9.863-.001 1.758.463 3.472 1.341 4.978l-1.018 3.714 3.864-1.013zm11.387-7.234c-.312-.156-1.847-.91-2.132-1.013-.285-.104-.493-.156-.7.156s-.804
+            1.013-.986 1.22c-.182.208-.363.234-.675.078-.312-.156-1.317-.485-2.509-1.548-.927-.827-1.552-1.849-1.734-2.16-.182-.312-.019-.481.137-.636.141-.14.312-.364.468-.546.156-.182.208-.312.312-.52s.052-.39-.026-.546c-.078-.156-.7-1.688-.96-2.312-.253-.61-.51-.527-.7-.537l-.598-.01c-.208 0-.546.078-.831.39s-1.091 1.066-1.091 2.597 1.117 3.013 1.273 3.221c.156.208 2.198 3.357 5.326 4.704.744.321 1.325.512 1.777.656.748.237 1.429.204 1.967.124.6-.089 1.847-.754 2.106-1.482.26-.727.26-1.351.182-1.481-.078-.13-.285-.208-.597-.364z" />
+                                </svg>
+                                Commander
+                            </button>
+                        </div>
+
+                        <div class="mt-8 space-y-2 border-t pt-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wide">Informations</h3>
+                            <ul class="text-sm space-y-2 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Livraison rapide dans Dakar (1-2h)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Produit 100% authentique
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Paiement à la livraison disponible
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-green-500">✔</span> Confirmation de commande après appel du
+                                    vendeur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="bg-gray-500 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+                <!-- EBUY info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-400 mb-4">EBUY</h2>
+                    <p class="text-sm text-gray-100">
+                        Les meilleurs produits mode, accessoires et sport. Livraison rapide & service fiable.
+                    </p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Liens</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-300">Accueil</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Produits</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Accessoires</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Mode</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-300">FAQ</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Contactez‑nous</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Livraison & Retours</a></li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Suivez‑nous</h3>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="hover:text-yellow-300"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white mt-8 pt-4 text-center text-sm text-gray-200">
+                &copy; 2026 EBUY — Tous droits réservés.
+            </div>
+
+        </div>
+    </footer>
+
 
 </body>
 
